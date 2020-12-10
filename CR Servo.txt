@@ -1,0 +1,15 @@
+// CR Servo Control
+
+
+# As a CR Servo
+
+CRServo crServo = hardwareMap.crservo.get("wobble_rotation");
+crServo.resetDeviceConfigurationForOpMode(); // No clue what this is/does
+
+crServo.setPower(); // Up: -0.45, Down: 0.45, Stop: 0.0 (Probably a -1 to 1 range)
+
+# As a servo
+
+Servo crServo = hardwareMap.servo.get("wobble_rotation");
+
+crServo.setPosition() // Up: 0.4, Down: 0.6, Stop: ≈ 0.5 (0 to 1 range, 0.5 should stop it)
